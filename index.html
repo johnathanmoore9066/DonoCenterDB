@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a3c9168805.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 class="page-title">Header</h1>
+    </header>
+    <nav>
+        <div class="nav-left">
+            <a href="#" class="link disabled">Volunteers</a>
+            <a href="#" class="link disabled">Donors</a>
+            <a href="#" class="link disabled">Pick up</a>
+            <a href="reportGen.html" target="_blank" class="link disabled">Reports</a>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="link">Reminders</a>
+    </nav>
+
+    <form>
+        <div class="form-title">Login</div>
+        <label for="username">Username</label><input class="username-input" id="usernameInput" type="text" autocomplete="off">
+        <label for="password">Password</label><input class="password-input" id="passwordInput" type="password">
+        <span class="submit-row"><div class="login-error">Invalid username or password. <br>Try again.</div><button class="submit" id="submit">Submit</button></span>
+    </form>
+    <section class="welcome-message hidden">
+        <h3 class="message" id="message"></h3>
+    </section>
+
+    <button class="sign-out" id="signOut">Sign out</button>
+
+    <script src="login.js"></script>
+    <script src="generator.js"></script>
+
+    
+</body>
+</html>

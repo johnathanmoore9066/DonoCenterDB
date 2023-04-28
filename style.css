@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300;500&family=Alegreya+Sans:wght@300;400;700&display=swap');
+
+:root {
+    --font-fam-nav: 'Alegreya Sans SC', sans-serif;
+    --font-fam-norm: 'Alegreya Sans', sans-serif;
+    --font-color-main: #222;
+    --green-accent: #e9f4aa;
+    --line-border-light: #7f7f7f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    padding: 2% 0;
+    font-family: var(--font-fam-norm);
+    position: absolute;
+    top: 0
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-fam-nav);
+    position: absolute;
+    top: 15%;
+}
+
+.nav-left,
+.nav-right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 3%;
+    justify-content: space-between;
+    
+}
+
+.nav-left {
+    width: 50%;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--font-color-main);
+    font-size: large;
+    font-weight: 500;
+}
+
+.disabled {
+    color: #b0b0b0;
+    pointer-events: none;
+    text-decoration: line-through;
+}
+
+form,
+.welcome-message {
+    font-family: var(--font-fam-norm);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px red solid; */
+    width: 50%;
+    height: 50%;
+    box-shadow: 0px 0px 8px 1px #ccc;
+    position: relative;
+    transform: translate(0, 15%);
+    border-radius: 5px;
+    opacity: 1;
+    animation: 1s ease linear
+}
+
+.form-title {
+    width: 100%;
+    height: 15%;
+    /* border: 1px red solid; */
+    position: absolute;
+    display: flex;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border-bottom: 2px var(--green-accent) solid;
+    letter-spacing: 1.5px;
+
+}
+
+input,
+label {
+    position: inherit;
+    width: 60%;
+    height: 10%;
+    font-size: 1.25rem;
+}
+
+label {
+    margin-top: 3%;
+    letter-spacing: 1.5px;
+}
+
+input {
+    outline: none;
+    padding: 1%;
+    border: 1px var(--line-border-light) solid;
+}
+
+.submit {
+    position: absolute;
+    right: 20%;
+    bottom: 5%;
+    height: 10%;
+    width: 15%;
+    background-color: var(--green-accent);
+    border: 1px var(--line-border-light) solid;
+    cursor: pointer;
+}
+
+.submit-row {
+    width: 100%;
+    display: flex;
+}
+
+.login-error {
+    position: absolute;
+    left: 20%;
+    bottom: 7%;
+    color: red;
+    width: 30%;
+    visibility: hidden;
+}
+
+.hidden {
+    display: none;
+    
+}
+
+.message {
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    color: var(--font-color-main)
+}
+
+.sign-out {
+    position: absolute;
+    bottom: 5%;
+    right: 1%;
+    width: 5vw;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: tomato;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    visibility: hidden;
+}
+
