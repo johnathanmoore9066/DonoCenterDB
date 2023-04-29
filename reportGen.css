@@ -20,6 +20,7 @@ body {
 
 .options,
 .results {
+    position: relative;
     height: 75vh;
     width: 60%;
     border: 2px red solid;
@@ -32,6 +33,12 @@ body {
 .results {
     overflow-x: scroll;
 
+}
+
+#report {
+    width: 100%;
+    height: max-content;
+    overflow-y: scroll;
 }
 
 table,
@@ -55,5 +62,23 @@ th {
 
 th {
     padding: 5px;
+}
+
+@media print {
+    nav {
+    display: none;
+    }
+    .options {
+        display: none;
+    }
+    @page {
+        size: 11in 8.5in;
+        margin: 0.5in;
+    }
+    #report {
+        zoom: 65%;
+        width: 100%;
+        height: max-content;
+    }
 }
 

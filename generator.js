@@ -1,5 +1,7 @@
 
+
 document.addEventListener("DOMContentLoaded", () => {
+
 
     var xhr = new XMLHttpRequest();
     var url = "donors.json";
@@ -37,8 +39,15 @@ donors.forEach((donor) => {
     donorAddress.textContent = donor.Address;
     row.appendChild(donorAddress)
     const donorAmount = document.createElement("td");
-    donorAmount.textContent = donor.Amount;
+    const amount = parseFloat(donor.Amount); // Convert the string to a number
+    const amountObj = amount.toLocaleString("en-US", {
+      style: "currency",
+      currency: "USD",
+    });
+    donorAmount.textContent = amountObj;
     row.appendChild(donorAmount)
+
+    
 
     tableBody.appendChild(row);
 });
@@ -115,10 +124,13 @@ donors.forEach((donor) => {
 
     tableBody.appendChild(row);
 });
+
 }
 }
 
 };
 
+
 xhr.send();
 });
+

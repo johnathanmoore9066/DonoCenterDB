@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+ 
     <title>Report Generator</title>
     <link rel="stylesheet" href="reportGen.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 <body>
     <section class="page-title">
@@ -20,6 +22,7 @@
             <button class="search" id="search">Search</button>
         </section>
         <section class="results">
+
             <table id="report">
                 <thead>
                     <tr>
@@ -32,7 +35,9 @@
                     </tr>
                 </thead>
             </table>
+
         </section>
+        
     </section>
     <script src="generator.js"></script>
 </body>
