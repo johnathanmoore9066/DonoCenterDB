@@ -31,12 +31,12 @@ body {
 }
 
 .results {
-    overflow-x: scroll;
+    width: 90vw
 
 }
 
 #report {
-    width: 100%;
+    width: max-content;
     height: max-content;
     overflow-y: scroll;
 }
@@ -71,12 +71,16 @@ th {
     .options {
         display: none;
     }
+    .results {
+        width: 100%;
+        height: max-content
+    }
     @page {
         size: 11in 8.5in;
-        margin: 0.5in;
+        margin: 1in;
     }
     #report {
-        zoom: 65%;
+        zoom: 100%;
         width: 100%;
         height: max-content;
     }
