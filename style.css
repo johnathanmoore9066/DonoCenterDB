@@ -4,8 +4,9 @@
     --font-fam-nav: 'Alegreya Sans SC', sans-serif;
     --font-fam-norm: 'Alegreya Sans', sans-serif;
     --font-color-main: #222;
-    --green-accent: #e9f4aa;
+    --blue-accent: #203569;
     --line-border-light: #7f7f7f;
+    --red-accent: #BF2125;
 }
 
 * {
@@ -103,7 +104,7 @@ form,
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    border-bottom: 2px var(--green-accent) solid;
+    border-bottom: 2px var(--red-accent) solid;
     letter-spacing: 1.5px;
 
 }
@@ -133,9 +134,10 @@ input {
     bottom: 5%;
     height: 10%;
     width: 15%;
-    background-color: var(--green-accent);
+    background-color: var(--blue-accent);
     border: 1px var(--line-border-light) solid;
     cursor: pointer;
+    color: #fff;
 }
 
 .submit-row {
