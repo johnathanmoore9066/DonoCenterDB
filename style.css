@@ -70,6 +70,13 @@ nav {
     font-weight: 500;
 }
 
+.link:hover {
+    color: var(--blue-accent);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    text-decoration: var(--red-accent) underline;
+    padding-bottom: .1em;
+}
+
 .disabled {
     color: #b0b0b0;
     pointer-events: none;
@@ -173,7 +180,7 @@ input {
     width: 5vw;
     aspect-ratio: 1;
     border-radius: 50%;
-    background-color: tomato;
+    background-color: var(--red-accent);
     color: #fff;
     font-weight: 600;
     cursor: pointer;
