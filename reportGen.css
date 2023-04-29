@@ -23,7 +23,7 @@ body {
     position: relative;
     height: 75vh;
     width: 60%;
-    border: 2px red solid;
+    /* border: 2px red solid; */
 }
 
 .options {
@@ -80,5 +80,6 @@ th {
         width: 100%;
         height: max-content;
     }
+ 
 }
 
