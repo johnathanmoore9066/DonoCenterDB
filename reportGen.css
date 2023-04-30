@@ -5,6 +5,9 @@ body {
     height: 100vh;
     overflow: hidden;
     font-family: 'Alegreya Sans';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   
   .page-title {
@@ -13,7 +16,7 @@ body {
   }
   
   .container {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -23,16 +26,15 @@ body {
   .results {
     position: relative;
     height: 75vh;
-    width: 60%;
     border: 2px black solid;
   }
   
   .options {
-    width: 25%;
+    width: 20vw;
   }
   
   .results {
-    width: 80vw;
+    width: 75vw;
     overflow: hidden;
     background-color: #c0c0c0;
   }
