@@ -1,8 +1,8 @@
-var xhr = new XMLHttpRequest();
-var url = "users.json";
-var submit = document.getElementById("submit");
-var loginErr = document.querySelector(".login-error");
-var userAuthenticated = false;
+let xhr = new XMLHttpRequest();
+let url = "users.json";
+let submit = document.getElementById("submit");
+let loginErr = document.querySelector(".login-error");
+let userAuthenticated = false;
 let greeting = document.getElementById('message');
 let signOut = document.getElementById('signOut');
 let disabledLinks = Array.from(document.getElementsByClassName("disabled"));

@@ -10,18 +10,18 @@ xhr.responseType = "json";
 // Specify what to do when the response is loaded
 xhr.onload = function() {
   // Get the JSON data
-  var data = xhr.response;
+  let data = xhr.response;
 
   // Get the table header element
-  var thead = document.querySelector("table.inventory thead");
+  let thead = document.querySelector("table.inventory thead");
 
   // Create a new row for the header
-  var headerRow = document.createElement("tr");
+  let headerRow = document.createElement("tr");
 
   // Loop through the keys of the first item in the data array
-  for (var key in data.items[0]) {
+  for (let key in data.items[0]) {
     // Create a new header cell with the key text as the content
-    var headerCell = document.createElement("th");
+    const headerCell = document.createElement("th");
     headerCell.textContent = key.replace(/_/g, ' '); // Replace underscores with spaces
 
     // Add an event listener to sort the table by clicking on the column header
@@ -36,23 +36,23 @@ xhr.onload = function() {
   thead.appendChild(headerRow);
 
   // Get the table body element
-  var tbody = document.querySelector("table.inventory tbody");
+  const tbody = document.querySelector("table.inventory tbody");
 
   // Loop through the data and create table rows
-  for (var i = 0; i < data.items.length; i++) {
+  for (let i = 0; i < data.items.length; i++) {
     // Create a new row
-    var row = document.createElement("tr");
+    const row = document.createElement("tr");
 
     // Loop through the keys of the current item
-    for (var key in data.items[i]) {
+    for (let key in data.items[i]) {
       // Create a new cell with the current item value as the content
       var cell = document.createElement("td");
       cell.textContent = data.items[i][key];
 
       // Add current date and time to the "Last updated" column
       if (key === 'Last_updated') {
-        var currentDate = new Date();
-        var timeOptions = { hour: 'numeric', minute: 'numeric', hour12: true };
+        const currentDate = new Date();
+        const timeOptions = { hour: 'numeric', minute: 'numeric', hour12: true };
         cell.textContent = currentDate.toLocaleDateString("en-US", {year: 'numeric', month: 'numeric', day: 'numeric' }) + " " + currentDate.toLocaleTimeString("en-US", timeOptions);
       }
 
@@ -72,14 +72,14 @@ xhr.send();
 
 // Function to sort the table by a given column index
 function sortTable(columnIndex) {
-  var table = document.querySelector("table.inventory");
-  var tbody = table.querySelector("tbody");
-  var rows = Array.from(tbody.querySelectorAll("tr"));
+  const table = document.querySelector("table.inventory");
+  const tbody = table.querySelector("tbody");
+  const rows = Array.from(tbody.querySelectorAll("tr"));
 
   // Sort the rows based on the data in the selected column
   rows.sort(function(a, b) {
-    var aCellValue = a.querySelector("td:nth-child(" + (columnIndex + 1) + ")").textContent;
-    var bCellValue = b.querySelector("td:nth-child(" + (columnIndex + 1) + ")").textContent;
+    const aCellValue = a.querySelector("td:nth-child(" + (columnIndex + 1) + ")").textContent;
+    const bCellValue = b.querySelector("td:nth-child(" + (columnIndex + 1) + ")").textContent;
 
     // If the cell value is a number, convert it to a number for proper sorting
     if (!isNaN(aCellValue) && !isNaN(bCellValue)) {
