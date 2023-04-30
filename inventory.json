@@ -1,0 +1,19 @@
+{
+    "items": [
+        {
+            "Item": "item1",
+            "Qty": 0,
+            "Location": "Storage Unit 1",
+            "Last_updated": "01/01/2021",
+            "Updated_by": "User"
+        },
+        {
+            "Item": "item2",
+            "Qty": 10,
+            "Location": "Storage Unit 3",
+            "Last_updated": "01/01/2022",
+            "Updated_by": "User"
+        }
+    ]
+    
+}

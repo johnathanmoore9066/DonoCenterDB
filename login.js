@@ -52,7 +52,6 @@ submit.addEventListener("click", ()=>{
             loginErr.style.visibility = "hidden";
             document.querySelector("form").style.display = "none";
             document.querySelector(".welcome-message").style.display = "flex";
-            document.querySelector(".sign-out").style.visibility = "visible"; 
             for (let i = 0; i < disabledLinks.length; i++) {
                 disabledLinks[i].classList.remove("disabled");
             }

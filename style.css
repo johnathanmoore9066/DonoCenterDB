@@ -22,6 +22,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: var(--font-fam-norm);
 }
 
 header {
@@ -72,15 +73,19 @@ nav {
 
 .link:hover {
     color: var(--blue-accent);
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     text-decoration: var(--red-accent) underline;
-    padding-bottom: .1em;
+    transition: 200ms linear;
 }
 
 .disabled {
-    color: #b0b0b0;
+    color: var(--line-border-light);
     pointer-events: none;
     text-decoration: line-through;
+}
+
+.current-page {
+    color: var(--red-accent);
+    pointer-events: none;
 }
 
 form,
@@ -173,17 +178,4 @@ input {
     color: var(--font-color-main)
 }
 
-.sign-out {
-    position: absolute;
-    bottom: 5%;
-    right: 1%;
-    width: 5vw;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background-color: var(--red-accent);
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
-    visibility: hidden;
-}
 

@@ -10,7 +10,6 @@
             "Amount": 50
 
         },
-
         {
             "Date": "02/03/2004",
             "Contact": "Tar Zann",
@@ -45,7 +44,6 @@
             "Email": "test@email.com",
             "Address": "123 Test st. City, ST  00000",
             "Amount": 1000
-
         }
     ]
 }
