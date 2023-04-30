@@ -1,4 +1,3 @@
-
 var xhr = new XMLHttpRequest();
 var url = "users.json";
 var submit = document.getElementById("submit");

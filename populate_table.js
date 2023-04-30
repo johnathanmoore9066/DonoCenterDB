@@ -1,4 +1,3 @@
-
 // Create an XMLHttpRequest object
 var xhr = new XMLHttpRequest();
 
