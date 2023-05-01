@@ -26,10 +26,21 @@
     </nav>
     <section class="inventory-wrapper">
     <section class="inventory-nav">
+        <input type="search" class="inventory-search" id="inventorySearch" placeholder="Search by item">
+        <section class="search-summary" id="searchSummary">
 
+        </section>
     </section>
     <section class="inventory-display">
         <div class="inventory-title">Inventory</div>
+        <span class="button-span">
+        <div class="span-left"><input class="filter-item" id="filterItem" placeholder="Filter"></div>
+            <div class="span-right">
+            <button class="add-item" id="addItem">Add</button>
+            <button class="modify-item" id="modifyItem">Modify</button>
+            <button class="delete-item" id="deleteItem">Delete</button></div>
+            </span>
+
         <table class="inventory">
             <tbody>
             <thead>
@@ -39,6 +50,11 @@
         </table>
 
     </section>
+    <section class="hidden-form-wrapper">
+        <form class="add-item-form" id="addItemForm">
+            <div class="add-item-title">Add New Item</div>
+        </form>
+  </section>
     </section>
 
 
