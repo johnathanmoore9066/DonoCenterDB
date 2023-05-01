@@ -1,19 +1,20 @@
 {
     "items": [
-        {
-            "Item": "item1",
-            "Qty": 0,
-            "Location": "Storage Unit 1",
-            "Last_updated": "01/01/2021",
-            "Updated_by": "User"
-        },
-        {
-            "Item": "item2",
-            "Qty": 10,
-            "Location": "Storage Unit 3",
-            "Last_updated": "01/01/2022",
-            "Updated_by": "User"
-        }
+      {
+        "Item": "Item 1",
+        "Qty": 10,
+        "Location": "A1",
+        "Last update": "2023-04-30",
+        "Updated by": "John Doe",
+        "Description": "Sample item 1"
+      },
+      {
+        "Item": "Item 2",
+        "Qty": 5,
+        "Location": "B2",
+        "Last update": "2023-04-28",
+        "Updated by": "Jane Doe",
+        "Description": "Sample item 2"
+      }
     ]
-    
-}
+  }

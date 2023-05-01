@@ -3,6 +3,7 @@
     --echo-red: #BF2125;
 }
 
+
 .inventory-wrapper {
     width: 90vw;
     height: max-content;
@@ -23,6 +24,7 @@
     padding: 5px;
     align-items: center;
     justify-content: center;
+    overflow-y: scroll;
 }
 
 .inventory-display {
@@ -72,7 +74,7 @@ th {
 
 .inventory-search {
     width: 90%;
-    height: 1.25rem;
+    height: 2rem;
     font-size: 1rem;
     padding: 2px;
     margin-bottom: 10px;
@@ -83,6 +85,7 @@ th {
 
     width: 90%;
     height: 90%;
+    overflow-y: scroll;
 }
 
 .button-span {
@@ -112,7 +115,6 @@ th {
     padding: 2px;
 }
 
-.add-item,
 .modify-item,
 .delete-item {
     width: max-content;
@@ -131,32 +133,91 @@ th {
 }
 
 .add-item-form {
-    width: 90%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: end;
     justify-content: center;
-    transform: translate(0, -5%);
+    padding: 12px
     
 }
 
-.hidden-form-wrapper {
+.add-item-title {
+    width: 90%;
+    height: 10%;
+    position: absolute;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    top: 0;
+    border-bottom: 1px var(--echo-blue) solid;
+}
+
+.add-form-wrapper {
     width: 25%;
-    height: 60vh;
+    height: 50vh;
     position: absolute;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     right: 0;
-    box-shadow: none;
-
-
-    border: 2px red solid;
+    top: 0;
 }
 
-.add-item-form > input {
-    width: 75%;
-    margin-bottom: 15px
+.add-item-form label {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 15%
+
+  }
+
+
+.add-item-form input {
+    width: 60%;
+    height: 1.25rem;
+    font-size: 1rem;
+    right: 0;
+    position: absolute;
+    padding: 10px
 }
+
+.add-item-form button {
+    width: 22%;
+    height: 10%;
+    position: absolute;
+    background-color: var(--echo-blue);
+    color: #efefef;
+    bottom: 5%;
+    right: 3%;
+    cursor: pointer;
+}
+
+.add-item-form button:hover {
+    border: 1px var(--echo-red) solid;
+
+}
+
+.search-result-card {
+    background-color: #f9f9f9;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    min-height: max-content;
+  }
+  
+  .search-summary {
+    min-height: max-content;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    background-color: #d9d9d9;
+  }
+
+  .search-result-card > .card-img {
+    width: 150px;
+    aspect-ratio: 1;
+    border: 1px black solid;
+  }

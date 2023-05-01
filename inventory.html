@@ -27,41 +27,47 @@
     <section class="inventory-wrapper">
     <section class="inventory-nav">
         <input type="search" class="inventory-search" id="inventorySearch" placeholder="Search by item">
-        <section class="search-summary" id="searchSummary">
-
+        <section class="search-summary hidden" id="searchSummary">
         </section>
     </section>
     <section class="inventory-display">
         <div class="inventory-title">Inventory</div>
         <span class="button-span">
-        <div class="span-left"><input class="filter-item" id="filterItem" placeholder="Filter"></div>
+        <div class="span-left"></div>
             <div class="span-right">
-            <button class="add-item" id="addItem">Add</button>
             <button class="modify-item" id="modifyItem">Modify</button>
             <button class="delete-item" id="deleteItem">Delete</button></div>
             </span>
 
-        <table class="inventory">
-            <tbody>
+        <table class="inventory" id="inventory">
             <thead>
-
+                <tr>
+                  <th>Item</th>
+                  <th>Qty</th>
+                  <th>Location</th>
+                  <th>Last update</th>
+                  <th>Updated by</th>
+                </tr>
             </thead>
+            <tbody>
             </tbody>
         </table>
 
     </section>
-    <section class="hidden-form-wrapper">
+    <section class="add-form-wrapper">
         <form class="add-item-form" id="addItemForm">
             <div class="add-item-title">Add New Item</div>
+            <label for="item">Item<input id="item"></label>
+            <label for="qty">Qty<input id="qty"></label>
+            <label for="location">Location<input id="location"></label>
+            <button id="submit">Add item</button>
+
         </form>
   </section>
     </section>
 
-
-
     <script src="login.js"></script>
     <script src="populate_table.js"></script>
-
-    
+    <!-- <script src="inventory.js"></script> -->
 </body>
 </html>
