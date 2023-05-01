@@ -88,8 +88,7 @@ nav {
     pointer-events: none;
 }
 
-form,
-.welcome-message {
+form {
     font-family: var(--font-fam-norm);
     display: flex;
     flex-direction: column;
@@ -168,14 +167,20 @@ input {
 
 .hidden {
     display: none;
-    
 }
 
-.message {
-    width: 100%;
+.welcome-message {
+    width: max-content;
+    height: max-content;
     text-align: center;
-    font-size: 4rem;
-    color: var(--font-color-main)
+    color: var(--font-color-main);
+    padding: 5px;
 }
 
-
+.dashboard-container {
+    position: absolute;
+    width: 90vw;
+    height: 65vh;
+    border: 2px black solid;
+    bottom: 10%
+}

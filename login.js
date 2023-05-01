@@ -1,18 +1,16 @@
-let xhr = new XMLHttpRequest();
-let url = "users.json";
-let submit = document.getElementById("submit");
-let loginErr = document.querySelector(".login-error");
-let userAuthenticated = false;
-let greeting = document.getElementById('message');
-let signOut = document.getElementById('signOut');
-let disabledLinks = Array.from(document.getElementsByClassName("disabled"));
+const xhr = new XMLHttpRequest();
+const url = "users.json";
+const submit = document.getElementById("submit");
+const loginErr = document.querySelector(".login-error");
+const userAuthenticated = false;
+// const greeting = document.getElementById('message');
+const disabledLinks = Array.from(document.getElementsByClassName("disabled"));
 
 
 
 if (userAuthenticated === "true") {
     document.querySelector("form").style.display = "none";
-    document.querySelector(".welcome-message").style.display = "flex";
-    document.querySelector(".sign-out").style.visibility = "visible"; 
+    // document.querySelector(".welcome-message").style.display = "flex";
 }
 
 xhr.open("GET", url, true);
@@ -46,11 +44,11 @@ submit.addEventListener("click", ()=>{
         let password = document.getElementById("passwordInput").value;
         if (authenticateUser(username, password)) {
             let thisUser = users.filter(user => user.username === username);
-            greeting.innerHTML = `Welcome, ${thisUser[0].fname}!`;
+            // greeting.innerHTML = `Hello, ${thisUser[0].fname}!`;
             userAuthenticated == true;
             loginErr.style.visibility = "hidden";
             document.querySelector("form").style.display = "none";
-            document.querySelector(".welcome-message").style.display = "flex";
+            // document.querySelector(".welcome-message").style.display = "flex";
             for (let i = 0; i < disabledLinks.length; i++) {
                 disabledLinks[i].classList.remove("disabled");
             }
