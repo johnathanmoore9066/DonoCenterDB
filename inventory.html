@@ -24,50 +24,42 @@
             <a href="#" class="link current-page">Inventory</a>
         </div>
     </nav>
-    <section class="inventory-wrapper">
-    <section class="inventory-nav">
-        <input type="search" class="inventory-search" id="inventorySearch" placeholder="Search by item">
-        <section class="search-summary hidden" id="searchSummary">
+    <main>
+        <section class="inventory-nav">
+          <div class="panel-title">Navigation</div>
+          <label for="inventorySearch"></label>
+          <input id="inventorySearch" type="search" placeholder="Search inventory">
+            <div id="recommendations" class="recommendations hidden"></div>
+          </div>
         </section>
-    </section>
-    <section class="inventory-display">
-        <div class="inventory-title">Inventory</div>
-        <span class="button-span">
-        <div class="span-left"></div>
-            <div class="span-right">
-            <button class="modify-item" id="modifyItem">Modify</button>
-            <button class="delete-item" id="deleteItem">Delete</button></div>
-            </span>
-
-        <table class="inventory" id="inventory">
+    
+        <section class="inventory-display" id="inventoryDisplay">
+          <table class="inventory" id="inventory">
             <thead>
-                <tr>
-                  <th>Item</th>
-                  <th>Qty</th>
-                  <th>Location</th>
-                  <th>Last update</th>
-                  <th>Updated by</th>
-                </tr>
+              <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Location</th>
+                <th>Date added</th>
+                <th>Added by</th>
+              </tr>
             </thead>
-            <tbody>
-            </tbody>
-        </table>
-
-    </section>
-    <section class="add-form-wrapper">
-        <form class="add-item-form" id="addItemForm">
-            <div class="add-item-title">Add New Item</div>
-            <label for="item">Item<input id="item"></label>
-            <label for="qty">Qty<input id="qty"></label>
-            <label for="location">Location<input id="location"></label>
-            <button id="submit">Add item</button>
-
-        </form>
-  </section>
-    </section>
-
-    <script src="login.js"></script>
-    <script src="populate_table.js"></script>
-    <!-- <script src="inventory.js"></script> -->
-</body>
-</html>
+            <tbody id="inventory-tbody">
+          </table>
+          <button id="delete">Delete Selected Items</button>
+        </section>
+    
+        <section class="inventory-edit" id="inventoryEdit">
+          <div class="panel-title">Manage Inventory</div>
+          <label for="item">Item: <input id="item"></label>
+          <label for="qty">Quantity: <input id="qty"></label>
+          <label for="location">Location: <input id="location"></label>
+          <button id="submit" type="submit">Submit</button>
+        </section>
+    
+      </main>
+      <script src="populate_table.js"></script>
+    
+     </body>
+    
+    </html>

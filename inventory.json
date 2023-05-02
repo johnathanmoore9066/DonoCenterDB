@@ -5,16 +5,14 @@
         "Qty": 10,
         "Location": "A1",
         "Last update": "2023-04-30",
-        "Updated by": "John Doe",
-        "Description": "Sample item 1"
+        "Updated by": "John Doe"
       },
       {
         "Item": "Item 2",
         "Qty": 5,
         "Location": "B2",
         "Last update": "2023-04-28",
-        "Updated by": "Jane Doe",
-        "Description": "Sample item 2"
+        "Updated by": "Jane Doe"
       }
     ]
   }
