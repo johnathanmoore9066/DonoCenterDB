@@ -8,20 +8,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const qtyInput = document.getElementById('qty');
   const locationInput = document.getElementById('location');
   const inventorySearch = document.getElementById('inventorySearch');
-  const recommendations = document.getElementById('recommendations');
+  const addedBy = document.getElementById("addedBy");
 
 
     // Add a new column for checkboxes in the table header
     const inventoryTableHead = document.querySelector('#inventory thead tr');
     const checkboxHeader = document.createElement('th');
+    const selectAllCheckbox = document.createElement('input');
     inventoryTableHead.insertBefore(checkboxHeader, inventoryTableHead.firstChild);
+
 
     function populateTable() {
       inventoryTableBody.innerHTML = '';
 
       inventoryData.items.forEach((item, index) => {
         const row = document.createElement('tr');
-
 
     // Checkbox cell
     const checkboxCell = document.createElement('td');
@@ -56,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         hour: '2-digit',
         minute: '2-digit',
     }).format(new Date()),
-      Added_by: 'Current user',
+      Added_by: addedBy.value,
     };
 
     inventoryData.items.push(newItem);
@@ -66,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     itemInput.value = '';
     qtyInput.value = '';
     locationInput.value = '';
+    addedBy.value = '';
   });
 
   deleteButton.addEventListener('click', () => {

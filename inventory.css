@@ -62,25 +62,7 @@
     width: 90%;
   }
 
-  .recommendations {
-    background: none;
-    margin-top: 4px;
-    max-height: 200px;
-    overflow-y: auto;
-    padding: 8px;
-    position: absolute;
-    width: 100%;
-    z-index: 99;
-  }
 
-  .recommendation {
-    cursor: pointer;
-    padding: 4px;
-  }
-
-  .recommendation:hover {
-    background-color: #f2f2f2;
-  }
   
   .panel-title {
     width: 100%;
@@ -97,7 +79,7 @@
     display: flex;
     flex-direction: column;
     border: 1px #666 solid;
-  
+    overflow: scroll;
   }
   
   .inventory-edit {
@@ -113,8 +95,9 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
     transform: translate(0, 50px);
+    font-size: 1rem;
   }
   
   .inventory-edit input {
@@ -128,7 +111,7 @@
     width: 5%;
     padding: 5px;
     position: absolute;
-    bottom: 25%;
+    bottom: 20%;
     right: 12px;
     background-color: var(--echo-blue);
     color: #fff;
@@ -162,19 +145,27 @@
 
   .inventory th {
     background-color: #ddd;
+    top: 10%;
+    position: relative;
   }
   
+  .del-button-strip {
+    width: 100%;
+    position: relative;
+    z-index: 99;
+  }
+
   #delete {
     color: var(--echo-red);
     height: 2.5rem;
     width: 13%;
     padding: 1%;
     position: absolute;
-    top: 0;
-    right: 24%;
+    top: 10%;
+    left: 0%;
     font-weight: 600;
-    background-color: #eee;
-    border: 1px #aaa solid;
+    background: none;
+    border: none;
   }
   
   #delete:hover {

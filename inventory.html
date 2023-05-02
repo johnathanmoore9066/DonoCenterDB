@@ -27,6 +27,8 @@
     <main>
         <section class="inventory-nav">
           <div class="panel-title">Navigation</div>
+          <button id="delete">Delete Selected Items</button>
+
           <label for="inventorySearch"></label>
           <input id="inventorySearch" type="search" placeholder="Search inventory">
             <div id="recommendations" class="recommendations hidden"></div>
@@ -46,7 +48,7 @@
             </thead>
             <tbody id="inventory-tbody">
           </table>
-          <button id="delete">Delete Selected Items</button>
+          
         </section>
     
         <section class="inventory-edit" id="inventoryEdit">
@@ -54,10 +56,12 @@
           <label for="item">Item: <input id="item"></label>
           <label for="qty">Quantity: <input id="qty"></label>
           <label for="location">Location: <input id="location"></label>
+          <label for="added_by">Added by: <input id="addedBy"></label>
           <button id="submit" type="submit">Submit</button>
         </section>
     
       </main>
+      <script src="login.js"></script>
       <script src="populate_table.js"></script>
     
      </body>
