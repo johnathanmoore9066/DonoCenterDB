@@ -37,7 +37,7 @@
     justify-content: space-between;
     align-items: center;
     top: 25%;
-    border: 2px #222 solid;
+    border: 1px #222 solid;
   }
 
   .hidden {
@@ -51,7 +51,7 @@
   .inventory-nav {
     width: 20%;
     height: 100%;
-    border: 1px #666 solid;
+    /* border: 1px #666 solid; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,7 +88,7 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
-    border: 1px #666 solid;
+    /* border: 1px #666 solid; */
   }
   
   .inventory-edit label {
@@ -123,7 +123,7 @@
     width: 100%;
     height: max-content;
     position: relative;
-    top: 10%;
+    /* top: 10%; */
   }
   
   table,
@@ -149,11 +149,7 @@
     position: relative;
   }
   
-  .del-button-strip {
-    width: 100%;
-    position: relative;
-    z-index: 99;
-  }
+
 
   #delete {
     color: var(--echo-red);

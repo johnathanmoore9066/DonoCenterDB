@@ -1,0 +1,55 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 90%;
+    height: 60%;
+    padding: 12px;
+    position: absolute;
+    border: 1px black solid;
+    top: 25%;
+    display: flex;
+}
+
+ul li {
+    list-style-type: none;
+    margin-bottom: 8px;
+    font-size: larger;
+    cursor: pointer;
+}
+
+li:hover {
+    color: #ddd;
+}
+
+.volunteer-list {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    border: 1px #777 solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.list-title {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 5%;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.volunteer-card {
+    width: 75%;
+    height: 100%;
+    border: 1px #222 solid;
+
+}
