@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="volunteers.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Inventory</title>
 </head>
 <body>
@@ -27,21 +26,32 @@
     <main>
         <section class="volunteer-list" id="volunteerList">
         <div class="list-title">Volunteers</div>
-        <ul>
-            <li>Chris Brown</li>
-            <li>John Legend</li>
-            <li>Jim Carrey</li>
-            <li>Mark Twain</li>
-            <li>David Spade</li>
-            <li>Alan Watts</li>
+        <ul id="nameList">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
         </ul>
         </section>
         <section class="volunteer-card" id="volunteerCard">
             <div class="info-wrapper">
-            <div class="card-title" id="cardTitle">Name</div>
-            <div class="card-organization" id="cardOrganization">Org</div>
-            <div class="card-phone" id="cardPhone">Ph</div>
-            <div class="card-email" id="cardEmail">Email</div>
-            
+            <div class="card-label" id="cardName">Name</div>
+            <div class="card-label" id="cardGender">Gender</div>
+            <div class="card-label" id="cardPhone">Ph</div>
+            <div class="card-label" id="cardEmail">Email</div>
+            <div class="card-label" id="cardAddress">Address</div>
+            <div class="card-label" id="cardOrg">Org</div>
+            <div class="card-label" id="cardPosition">Position</div>
+            </div>
+            <div class="thank-you" id="thankYou">
+                <textarea></textarea>
+                <button class="send-thanks" id="sendThanks">Send</button>
+            </div>
         </section>
     </main>
+    <script type="module" src="profile.js"></script>
+    <script type="module" src="volunteers.js"></script>
+</body>
+</html>

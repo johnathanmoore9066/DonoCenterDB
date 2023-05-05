@@ -21,6 +21,12 @@ ul li {
     margin-bottom: 8px;
     font-size: larger;
     cursor: pointer;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #222
 }
 
 li:hover {
@@ -51,5 +57,21 @@ li:hover {
     width: 75%;
     height: 100%;
     border: 1px #222 solid;
+    display: flex;
 
+}
+
+.info-wrapper {
+    width: 33%;
+    height: 100%;
+    border: 1px #222 solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 8px;
+    font-size: large;
+}
+
+.card-label {
+    font-weight: 600;
 }
